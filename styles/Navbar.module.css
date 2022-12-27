@@ -1,0 +1,32 @@
+.containerNavbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0D0D0D;
+    height: 70px;
+    position: sticky;
+    width: 100%;
+}
+
+
+.ulItems {
+    display: flex;
+    list-style: none;
+}
+
+.liItems > a{
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+
+.liItems {
+    margin: 0px 50px 0px 50px;
+}
+
+@media screen and (max-width: 800px) {
+    .ulItems {
+      display: none;
+    }
+  }
