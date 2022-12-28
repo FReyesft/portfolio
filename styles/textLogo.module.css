@@ -1,0 +1,12 @@
+.textLogo {
+    display: none;
+}
+  @media screen and (max-width: 800px) {
+    .textLogo {
+        display: block;
+        color: #fff;
+        position: absolute;
+        right: 40px;
+        font-size: 17px;
+    }
+  }
