@@ -76,5 +76,8 @@ const List = styled.nav`
     color: #fff;
     font-size: 14px;
    }
+.ulToggleButton li > a:hover {
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #7D79F2, 0 0 30px #7D79F2, 0 0 40px #7D79F2, 0 0 55px #7D79F2, 0 0 75px #7D79F2, 0px 16px 14px rgba(125,121,242,0);
   }
+}
 `;
