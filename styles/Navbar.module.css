@@ -4,20 +4,23 @@
     align-items: center;
     background: #0D0D0D;
     height: 70px;
-    position: sticky;
+    position: fixed;
     width: 100%;
+    top: 0;
 }
 
 
 .ulItems {
     display: flex;
     list-style: none;
+    user-select: none;
 }
 
 .liItems > a{
     text-decoration: none;
     color: #fff;
     letter-spacing: 1px;
+    user-select: none;
 }
 
 .liItems > a:hover{
@@ -29,6 +32,7 @@
 
 .liItems {
     margin: 0px 50px 0px 50px;
+    user-select: none;
 }
 
 @media screen and (max-width: 800px) {

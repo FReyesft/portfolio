@@ -1,7 +1,28 @@
 body {
-    background-color: #737372;
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Prompt', sans-serif;
-    font-weight: bold;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Prompt", sans-serif;
+  font-weight: bold;
+  background-color: #5550f2;
+  opacity: 1;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #5550f2 20%,
+      #5550f2 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #5550f2 20%,
+        #5550f2 80%,
+        transparent 80%,
+        transparent
+      )
+      52.5px 52.5px,
+    linear-gradient(#7d79f2 4.2px, transparent 4.2px) 0 -2.1px,
+    linear-gradient(90deg, #7d79f2 4.2px, #5550f2 4.2px) -2.1px 0;
+  background-size: 105px 105px, 105px 105px, 52.5px 52.5px, 52.5px 52.5px;
 }
