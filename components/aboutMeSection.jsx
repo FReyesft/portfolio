@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 export default function AboutMe() {
   const [text, setText] = useState(true);
   return (
@@ -18,21 +19,21 @@ export default function AboutMe() {
           />
           <div>
             {text ? (
-              <p>
-                🇺🇸 Hello, my name is Fernando Reyes full stack developer with
-                JavaScript, but I am focused on front-end development, I like to
-                know a lot about something, but also a little about everything,
-                my goal is to improve my profile as a programmer and also help
-                the company contributing my knowledge.
-              </p>
+              <motion.p animate={{ x: [0, 20, 0] }}>
+                🇺🇸 Hello, my name is Fernando Reyes, I am a full stack developer
+                with JavaScript, I am focused on front-end development, I like
+                to know a lot about something, but a little about everything, I
+                am effective when it comes to proposing solutions, good ability
+                to work both in a team and independently.
+              </motion.p>
             ) : (
-              <p>
-                🇪🇸 Hola, mi nombre es Fernando Reyes full stack developer con
-                JavaScript, pero estoy focalizado en el desarrollo front-end, me
-                gusta saber mucho de algo, pero tambien un poco de todo, mi meta
-                es mejorar mi perfil como programador y tambien ayudar a la
-                empresa aportando mi conocimiento.
-              </p>
+              <motion.p animate={{ x: [0, -20, 0] }}>
+                🇪🇸 Hola, mi nombre es Fernando Reyes, soy desarrollador full
+                stack con JavaScript, Estoy enfocado en el desarrollo front-end,
+                me gusta saber mucho de algo, pero un poco de todo, soy eficaz a
+                la hora de proponer soluciones, buena habilidad para trabajar
+                tanto en equipo como autónomamente.
+              </motion.p>
             )}
           </div>
         </div>
@@ -43,9 +44,12 @@ export default function AboutMe() {
 
 const Section = styled.div`
   p {
-    margin-top: 15px;
+    margin-top: 25px;
     color: #000;
     font-size: 18px;
+    -webkit-animation: tracking-in-expand 0.7s
+      cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   }
   .content {
     display: none;
@@ -78,9 +82,7 @@ const Section = styled.div`
     border-radius: 25px;
     transition: 0.25s;
     box-sizing: border-box;
-    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 2px #fff, 0 0 5px #7d79f2,
-      0 0 30px #7d79f2, 0 0 40px #7d79f2, 0 0 55px #7d79f2, 0 0 75px #7d79f2,
-      0px 16px 14px rgba(125, 121, 242, 0);
+    border: 1px solid #fff;
   }
   .check:checked:after {
     left: 25px;
