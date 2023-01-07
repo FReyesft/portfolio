@@ -9,8 +9,8 @@ export default function AboutMe() {
       <Section>
         <div>
           <motion.h2
-            initial={{ opacity: 0 , width: 150, height:150}}
-            animate={{ opacity: 1, width:200, height: 200 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ ease: "easeOut", duration: 1 }}
           >
             FReyeSFT

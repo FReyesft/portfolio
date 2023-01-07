@@ -16,7 +16,7 @@ export default function Navbar() {
                 <Link href="#">Home</Link>
               </li>
               <li>
-                <Link href="#">My Skills</Link>
+                <Link href="#">Skills</Link>
               </li>
               <li>
                 <Link href="#">Portfolio</Link>
@@ -49,7 +49,7 @@ const List = styled.nav`
   position:absolute;
   left: -250px;
   top: 15px;
-  width: 240px;
+  width: 270px;
   transition: all 1s ease;
   font-weight: bold;
 }
@@ -60,9 +60,9 @@ const List = styled.nav`
   border-radius: 15px;
   height: 40px;
   position:absolute;
-  left: 10px;
-  top: 15px;
-  width: 240px;
+  left: -10px;
+  top: 50px;
+  width: 80%;
   font-weight: bold;
 }
 
@@ -74,6 +74,7 @@ const List = styled.nav`
    padding-right: 20px;
   }
 .ulToggleButton li > a{
+    display: block;
     text-decoration: none;
     margin-left: 10px;
     color: #fff;
