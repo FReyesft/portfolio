@@ -1,13 +1,20 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+
 export default function AboutMe() {
   const [text, setText] = useState(true);
   return (
     <>
       <Section>
         <div>
-          <h2>FReyeSFT</h2>
+          <motion.h2
+            initial={{ opacity: 0 , width: 150, height:150}}
+            animate={{ opacity: 1, width:200, height: 200 }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            FReyeSFT
+          </motion.h2>
           English/Spanish
           <input
             type="checkbox"
@@ -92,9 +99,31 @@ const Section = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     margin-top: 70px;
+    background-color: #5550f2;
+    opacity: 1;
+    background: radial-gradient(
+        circle,
+        transparent 20%,
+        #5550f2 20%,
+        #5550f2 80%,
+        transparent 80%,
+        transparent
+      ),
+      radial-gradient(
+          circle,
+          transparent 20%,
+          #5550f2 20%,
+          #5550f2 80%,
+          transparent 80%,
+          transparent
+        )
+        52.5px 52.5px,
+      linear-gradient(#7d79f2 4.2px, transparent 4.2px) 0 -2.1px,
+      linear-gradient(90deg, #7d79f2 4.2px, #5550f2 4.2px) -2.1px 0;
+    background-size: 105px 105px, 105px 105px, 52.5px 52.5px, 52.5px 52.5px;
   }
   h2 {
     display: flex;
@@ -121,6 +150,12 @@ const Section = styled.div`
   }
 
   @media screen and (max-width: 800px) {
+     {
+      height: 120vh;
+    }
+    h2 {
+      margin-top: 0px;
+    }
     div {
       display: flex;
       flex-direction: column;
