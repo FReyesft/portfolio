@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
+import Typewriter from "typewriter-effect";
 export default function AboutMe() {
   const [text, setText] = useState(true);
   return (
@@ -13,9 +13,15 @@ export default function AboutMe() {
             animate={{ opacity: 1 }}
             transition={{ ease: "easeOut", duration: 1 }}
           >
-            FReyeSFT
+            <Typewriter
+              options={{
+                strings: ["Hello I am", "FReyeSFT"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
           </motion.h2>
-          English/Spanish
+          🇺🇸/🇪🇸
           <input
             type="checkbox"
             id="switch"
@@ -27,19 +33,20 @@ export default function AboutMe() {
           <div>
             {text ? (
               <motion.p animate={{ x: [0, 20, 0] }}>
-                🇺🇸 Hello, my name is Fernando Reyes, I am a full stack developer
-                with JavaScript, I am focused on front-end development, I like
-                to know a lot about something, but a little about everything, I
-                am effective when it comes to proposing solutions, good ability
-                to work both in a team and independently.
+                <h3>I am Web Developer</h3> and my name is Fernando Reyez, i am
+                focused on front-end development with Javascript, React.js +
+                Next.js, HTML, CSS, MySQL using tools like npm, VScode,
+                Postgress.<br/> I am effective when proposing solutions, Good ability
+                to work both in a team and autonomously.
               </motion.p>
             ) : (
               <motion.p animate={{ x: [0, -20, 0] }}>
-                🇪🇸 Hola, mi nombre es Fernando Reyes, soy desarrollador full
-                stack con JavaScript, Estoy enfocado en el desarrollo front-end,
-                me gusta saber mucho de algo, pero un poco de todo, soy eficaz a
-                la hora de proponer soluciones, buena habilidad para trabajar
-                tanto en equipo como autónomamente.
+                <h3>Soy Desarrollador Web</h3> y mi nombre es Fernando Reyez,
+                estoy enfocado en el desarrollo front-end con Javascript,
+                React.js + Next.js, HTML, CSS, MySQL el uso de herramientas como
+                npm, VScode, Postgress.<br/>Soy eficaz a la hora de proponer
+                soluciones, buena habilidad para trabajar tanto en equipo como
+                de forma autónoma.
               </motion.p>
             )}
           </div>
@@ -57,16 +64,25 @@ export default function AboutMe() {
 }
 
 const Section = styled.div`
-{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
-  opacity: 1;
-  background-image: linear-gradient(0deg, #4429f2 0%, #80d0c7 100%);
-}
+  .Typewriter {
+    font-size: 35px;
+    display: inline-block;
+  }
+   {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    opacity: 1;
+    background-image: linear-gradient(0deg, #4429f2 0%, #80d0c7 100%);
+  }
+  h3 {
+    display: inline-block;
+    margin: 0;
+    font-size: 28px;
+  }
   p {
     margin-top: 25px;
     color: #000;
@@ -112,11 +128,12 @@ const Section = styled.div`
     left: 25px;
   }
   h2 {
+    flex-direction: row;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    width: 200px;
+    border-radius: 15%;
+    width: 300px;
     height: 200px;
     background-color: #7d79f2;
     font-size: 35px;
@@ -137,17 +154,17 @@ const Section = styled.div`
 
   @media screen and (max-width: 800px) {
      {
-      height: 120vh;
+      height: 130vh;
     }
-    h2 {
-      margin-top: 40px;
+    h3 {
+      font-size: 25px;
     }
     div {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-left: 10%;
-      padding-right: 10%;
+      padding-left: 7%;
+      padding-right: 7%;
     }
   }
 `;
