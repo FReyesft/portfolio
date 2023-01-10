@@ -45,11 +45,28 @@ export default function AboutMe() {
           </div>
         </div>
       </Section>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#4429F2"
+          fill-opacity="1"
+          d="M0,192L60,202.7C120,213,240,235,360,208C480,181,600,107,720,85.3C840,64,960,96,1080,96C1200,96,1320,64,1380,48L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+        ></path>
+      </svg>
     </>
   );
 }
 
 const Section = styled.div`
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  opacity: 1;
+  background-image: linear-gradient(0deg, #4429f2 0%, #80d0c7 100%);
+}
   p {
     margin-top: 25px;
     color: #000;
@@ -94,37 +111,6 @@ const Section = styled.div`
   .check:checked:after {
     left: 25px;
   }
-   {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    margin-top: 70px;
-    background-color: #5550f2;
-    opacity: 1;
-    background: radial-gradient(
-        circle,
-        transparent 20%,
-        #5550f2 20%,
-        #5550f2 80%,
-        transparent 80%,
-        transparent
-      ),
-      radial-gradient(
-          circle,
-          transparent 20%,
-          #5550f2 20%,
-          #5550f2 80%,
-          transparent 80%,
-          transparent
-        )
-        52.5px 52.5px,
-      linear-gradient(#7d79f2 4.2px, transparent 4.2px) 0 -2.1px,
-      linear-gradient(90deg, #7d79f2 4.2px, #5550f2 4.2px) -2.1px 0;
-    background-size: 105px 105px, 105px 105px, 52.5px 52.5px, 52.5px 52.5px;
-  }
   h2 {
     display: flex;
     justify-content: center;
@@ -154,7 +140,7 @@ const Section = styled.div`
       height: 120vh;
     }
     h2 {
-      margin-top: 0px;
+      margin-top: 40px;
     }
     div {
       display: flex;
