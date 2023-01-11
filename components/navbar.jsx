@@ -28,7 +28,7 @@ export default function Navbar() {
           <li className={styles.liItems}>
             <p
               onClick={() => {
-                window.scrollTo(0, 670);
+                window.scrollTo(0, 800);
               }}
             >
               My Skills
