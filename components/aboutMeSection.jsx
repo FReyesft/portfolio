@@ -8,19 +8,35 @@ export default function AboutMe() {
     <>
       <Section>
         <div>
-          <motion.h2
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ ease: "easeOut", duration: 1 }}
-          >
-            <Typewriter
-              options={{
-                strings: ["Hello I am", "FReyeSFT"],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </motion.h2>
+          {text ? (
+            <motion.h2
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 1 }}
+            >
+              <Typewriter
+                options={{
+                  strings: ["Hello I am", "FReyeSFT"],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </motion.h2>
+          ) : (
+            <motion.h2
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 1 }}
+            >
+              <Typewriter
+                options={{
+                  strings: ["Hola Soy", "FReyeSFT"],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </motion.h2>
+          )}
           🇺🇸/🇪🇸
           <input
             type="checkbox"
@@ -36,17 +52,19 @@ export default function AboutMe() {
                 <h3>I am Web Developer</h3> and my name is Fernando Reyez, i am
                 focused on front-end development with Javascript, React.js +
                 Next.js, HTML, CSS, MySQL using tools like npm, VScode,
-                Postgress.<br/> I am effective when proposing solutions, Good ability
-                to work both in a team and autonomously.
+                Postgress.
+                <br /> I am effective when proposing solutions, Good ability to
+                work both in a team and autonomously.
               </motion.p>
             ) : (
               <motion.p animate={{ x: [0, -20, 0] }}>
                 <h3>Soy Desarrollador Web</h3> y mi nombre es Fernando Reyez,
                 estoy enfocado en el desarrollo front-end con Javascript,
                 React.js + Next.js, HTML, CSS, MySQL el uso de herramientas como
-                npm, VScode, Postgress.<br/>Soy eficaz a la hora de proponer
-                soluciones, buena habilidad para trabajar tanto en equipo como
-                de forma autónoma.
+                npm, VScode, Postgress.
+                <br />
+                Soy eficaz a la hora de proponer soluciones, buena habilidad
+                para trabajar tanto en equipo como de forma autónoma.
               </motion.p>
             )}
           </div>

@@ -13,7 +13,8 @@ export default function SkillItems() {
   const { scrollYProgress } = useScroll()
   return (
     <>
-      <animated.section style={{ opacity: scrollYProgress }} className={styles.containerSection}>
+    <div className={styles.containerSection}>
+      <animated.section style={{ opacity: scrollYProgress }} className={styles.containerSection1}>
         <h2 className={styles.title} id="skills">My Skills</h2>
         <ul className={styles.ulList}>
           <div className={styles.containerList}>
@@ -85,6 +86,7 @@ export default function SkillItems() {
           </div>
         </ul>
       </animated.section>
+      </div>
     </>
   );
 }
